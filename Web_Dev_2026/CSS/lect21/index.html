@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries in CSS</title>
+    <style>
+        /* .box{
+            background-color: aqua;
+            border: 3px solid black;
+            height: 400px;
+            width: 400px;
+        }
+        @media (min-width: 300px) and (max-width: 500px){
+            .box{
+                background-color: green;
+            }
+        }
+         */
+
+         .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 5px;
+         }
+
+         .box1{
+            background-color: slateblue;
+         }
+         .box2{
+            background-color: tomato;
+         }
+         .box3{
+            background-color: thistle;
+         }
+         .box4{
+            background-color: maroon;
+         }
+
+         .container{
+            display: flex;
+            flex-direction: column;
+         }
+
+         @media (min-width: 640px) {
+            .container{
+                flex-direction: row;
+            }
+         }
+
+
+         .parent{
+            display: flex;
+            flex-direction: row;
+         }
+
+         .child1{
+            display: flex;
+            flex-direction: column;
+         }
+
+         @media (max-width: 640px) {
+            .parent{
+                flex-direction: column;
+            }
+         }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        Hello Jee
+    </div> -->
+
+    <!-- <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div> -->
+
+    <div class="parent">
+        <div class="child1">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui delectus, libero, vel reprehenderit magnam voluptatibus sapiente voluptatum assumenda facilis doloribus temporibus possimus iste? Cum voluptatem in assumenda delectus aspernatur qui cupiditate inventore, odio velit ducimus facilis maxime sint et aperiam tempore! Rem cum, atque repudiandae accusamus eius nam sequi quas.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, inventore corporis nam laborum possimus eveniet non voluptas odit est odio, quis a ipsa obcaecati repellat placeat expedita nobis unde accusantium! Nesciunt magni dolorem vero ipsa voluptatem aliquam sint quae tenetur qui aperiam, eveniet voluptatibus quos, nihil veritatis placeat, enim tempora! Ea numquam quam aperiam enim ratione asperiores similique reiciendis molestiae ducimus totam tempora aliquam eius ad tempore commodi, in eaque, quibusdam necessitatibus vel porro at officia, deleniti repellat placeat. Eaque tempora temporibus quos suscipit! Ut maxime voluptate vero quae ab officia doloremque sit nesciunt, iure quos ducimus expedita aperiam soluta.</p>
+        </div>
+        <div class="child2">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.zY8ZFMpqLxJDJwZT6XtVrwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+        </div>
+    </div>
+</body>
+</html>

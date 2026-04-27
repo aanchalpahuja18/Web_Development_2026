@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox in CSS</title>
+    <style>
+        .container{
+            background-color: beige;
+            border: 3px solid black;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap-reverse; */
+            height: 1500px;
+            /* justify-content: center; */
+            /* align-items: stretch; */
+            align-items: start;
+            justify-content: start;
+            /* flex-wrap: wrap; */
+            /* align-content: end; */
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 2px;
+            border: 1px solid black;
+            padding: 2px;
+        }
+        #box1{
+            background-color: slateblue;
+            /* order: 500; */
+            /* flex-shrink: 4; */
+            /* flex-grow: 1; */
+            align-self: end;
+        }
+        #box2{
+            background-color: cadetblue;
+            /* flex-grow: 1; */
+        }
+        #box3{
+            background-color: lightcoral;
+            /* flex-grow: 1; */
+        }
+        #box4{
+            background-color: yellowgreen;
+            /* order: -1; */
+            /* flex-grow: 1;
+            flex-basis: 400px; */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box2">B</div>
+        <div class="box" id="box3">C</div>
+        <div class="box" id="box4">D</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions in CSS</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: slateblue;
+            transition-property: all;
+            transition-delay: 1s;
+            transition-duration: 4s;
+            transition-timing-function: ease-in;
+        }
+        .box:hover{
+            width: 1200px;
+            background-color: black;
+        }
+
+        .box2{
+            width: 100px;
+            height: 50px;
+            background-color: hotpink;
+            color: white;
+            border-radius: 5px;
+            padding: 15px;
+            /* transition-property: all;
+            transition-delay: 0s;
+            transition-duration: 4s;
+            transition-timing-function: ease-out; */
+
+            /* shorthand notation */
+
+            transition: width 2s, height 5s;
+        }
+
+        .box2:hover{
+            width: 600px;
+            height: 940px;
+            background-color: white;
+            color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <br> <br>
+    <div class="box2">
+        Hover to see the transition
+    </div>
+</body>
+</html>

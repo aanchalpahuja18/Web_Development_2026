@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property in CSS</title>
+    <style>
+        img{
+            margin: 10px;
+        }
+        div{
+            border: 1px solid black;
+            height: 8000px;
+        }
+        /* #img2{
+            position: relative;
+            top: 100px;
+            left: 200px;
+        } */
+        .container{
+            position: relative;
+        }
+        /* #img2{
+            position: absolute;
+            top: 100px;
+        } */
+
+        #img4{
+            position: fixed;
+        }
+        #img3{
+            position: sticky;
+            top: 100px;
+        }
+        .box{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.zY8ZFMpqLxJDJwZT6XtVrwHaFj?w=4032&h=3024&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" width="300px" height="300px" id="img1">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.BwfxMH19jwM7b3OnyzFbWwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt=""
+        width="300px" height="300px" id="img2">
+        <img src="https://images.pexels.com/photos/998679/pexels-photo-998679.jpeg?cs=srgb&dl=pexels-balazs-utasi-268058-998679.jpg&fm=jpg" alt="" width="300px" height="300px" id="img3">
+        <img src="https://pswish.com/wp-content/uploads/2023/09/random-stock-photos-1024x585.jpg" alt="" width="300px" height="300px" id="img4">
+    </div>
+
+    <div class="box"></div>
+</body>
+</html>

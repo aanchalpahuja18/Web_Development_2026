@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Effects in CSS</title>
+    <style>
+
+        :root{
+            --primary-color: brown;
+            --custom-width: 300px
+        }
+        .container{
+            background-color: beige;
+            height: 640px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: var(--custom-width);
+            height: 300px;
+            background-color: tomato;
+            border: 2px solid var(--primary-color);
+            margin: 5px;
+            padding: 5px;
+            /* box-shadow: 10px 15px brown; */
+            /* box-shadow: 10px 15px 10px black; */
+             /* box-shadow: 10px 15px 10px 50px black; */
+            /* box-shadow: inset 10px 15px brown; */
+            /* box-shadow: 10px 15px red, 20px 25px green; */
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        #head{
+            /* text-shadow: 2px 3px 5px white; */
+            /* text-shadow: yellow 12px 3px 10px; */
+            /* text-shadow: greenyellow 12px 3px; */
+            /* text-shadow: 10px 20px; */
+            text-shadow: 5px 7px 5px red, 7px 8px 2px green, 9px 10px 4px blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.zY8ZFMpqLxJDJwZT6XtVrwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+            <h2 id="head">Welcome to CodeHelp</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis porro incidunt at ducimus delectus inventore nam repudiandae sunt ab quam!</p>
+        </div>
+    </div>
+</body>
+</html>
