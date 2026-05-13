@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkpoint Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-content">
+                <div class="header-logo">
+                    <a href="https://cs.fyi/">
+                        <img src="../lect33_38_StudySync/images/StudySyn.svg" alt="header-logo">
+                    </a>    
+                </div>
+                <div class="header-links">
+                    <a href="#">Home</a>
+                    <a href="https://cs.fyi/explore">Explore</a>
+                </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main-content">
+            <div class="main-header">
+                <a href="https://cs.fyi/css" class="main-btn">CSS</a>
+            </div>
+            <div class="main-info">
+                <p class="main-heading">Target nth element in Tailwind</p>
+                <p class="main-date">January 19, 2023</p>
+                <p class="main-desc">I recently encountered a situation where I needed to target the “nth element” in a list. I had a list of items, and I wanted to apply a different background color to every other row, e.g., all the even rows would have a white background, and all the odd rows would have a light grey background. The HTML looked along the lines of:</p>
+            </div>
+            <div class="main-code">
+    <pre>
+    &lt;<span>div</span>&gt;
+        &lt;<span>div</span>&gt;First row of the list&lt;/<span>div</span>&gt;
+        &lt;<span>div</span>&gt;Second row of the list&lt;/<span>div</span>&gt;
+        &lt;<span>div</span>&gt;Third row of the list&lt;/<span>div</span>&gt;
+        &lt;<span>div</span>&gt;Fourth row of the list&lt;/<span>div</span>&gt;
+        &lt;<span>div</span>&gt;Fifth row of the list&lt;/<span>div</span>&gt;
+    &lt;/<span>div</span>&gt;
+    </pre>
+            </div>
+
+            <div class="vanilla">
+                <p class="main-desc">In vanilla CSS, you could achieve this using <span>`nth-child`</span> selector. But Tailwind doesn’t have an <span>`nth-child`</span> variant. So how do you target the “nth element” in Tailwind?</p>
+            </div>
+
+            <div class="tailwind">
+                <p class="main-desc">Tailwind has a concept of “arbitrary variants, ” allowing you to create custom variants. So I could implement the same functionality using the following Tailwind classes on the parent element:</p>
+            </div>
+
+            <div class="tailwind-main-code main-code">
+    <pre>
+    <span class="tailwind-header">
+    &lt;!--
+    ==================================
+              Classes to apply on parent element
+    ==================================
+        [&&gt;*:nth-child(odd)]:bg-gray-300
+        [&&gt;*:nth-child(even)]:bg-white
+    --&gt;
+    </span>
+    &lt;<span>div</span>  <span style="color: #62e884;">class</span><span>=</span><span style="color: #fef08a;">"[&&gt;*:nth-child(odd)]:bg-gray-300  [&&gt;* :nth-child(even)]:bg-white"&gt;</span>
+        &lt;<span>div</span>&gt;First row of the list&lt;/<span>div</span>&gt;
+        &lt;<span>div</span>&gt;Second row of the list&lt;/<span>div</span>&gt;
+        &lt;<span>div</span>&gt;Third row of the list&lt;/<span>div</span>&gt;
+        &lt;<span>div</span>&gt;Fourth row of the list&lt;/<span>div</span>&gt;
+        &lt;<span>div</span>&gt;Fifth row of the list&lt;/<span>div</span>&gt;
+    &lt;/<span>div</span>&gt;
+    </pre>            
+            </div>
+
+            <div>
+                <p class="main-desc">To make the above a bit less verbose you can also create a custom variant in your Tailwind config file using the <span style="color: #fef08a;">`addVariant`</span> API. Have a look at the <a href="https://tailwindcss.com/docs/hover-focus-and-other-states#using-arbitrary-variants" class="anchor">tailwind documentation</a> for more information on how to use arbitrary variants.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <p>
+            © All rights reserved — cs.fyi
+        </p>
+    </div>
+</body>
+</html>
