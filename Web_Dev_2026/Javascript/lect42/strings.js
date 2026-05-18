@@ -74,7 +74,31 @@ let main = words.join(' , ');
 
 let sentence2 = "\\Hello \\Jii \\Kese \\Ho"
 
-console.log(sentence2.split('\\'));
+// console.log(sentence2.split('\\'));
+
+//9. charAt method in Strings:
+
+let newWord = "Banana";
+
+console.log(newWord.charAt(1)); //returns the character present on the particular index mentioned inside the method.
+
+//10. indexOf method in Strings:
+
+let word2 = "Papaya";
+
+console.log(word2.indexOf('P')); // Returns the position of the first occurrence of the character present in the string.
+
+
+//11. Replace method in Strings:
+
+let str = "Aanchal";
+
+console.log(str.replace('A', 'P')); // Replaces the character mentioned at first position with the character mentioned at second position.
+
+
+
+
+
 
 
 
