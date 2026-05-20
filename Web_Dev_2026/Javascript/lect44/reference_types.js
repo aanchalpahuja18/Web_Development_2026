@@ -101,7 +101,7 @@ let ans = newArr.map((el) => {
 // console.log(newArr);
 // console.log(ans);
 
-//9. filter(): It filters the values based on the evaluation of the conditions. If the condition evaluates to (truthy) true then keep that particular element if it evaluates to (falsy) false remove that element / do not add the element to the new array. We do not explicitly have to return true or false javascript does it internally.
+//8. filter(): It filters the values based on the evaluation of the conditions. If the condition evaluates to (truthy) true then keep that particular element if it evaluates to (falsy) false remove that element / do not add the element to the new array. We do not explicitly have to return true or false javascript does it internally.
 
 //filtering out the even values
 newArr = [1,2,3,4,5,6];
@@ -119,7 +119,7 @@ ans = newArr.filter((el) => {
 // console.log(newArr);
 
 
-//10. reduce(): It reduces the array elements into a single value which is returned and stored in the acc. 
+//9. reduce(): It reduces the array elements into a single value which is returned and stored in the acc. 
 
 newArr = [10,20,30,40];
 
@@ -132,7 +132,7 @@ console.log(ans);
 console.log(newArr);
 
 
-//11. sort(): Sorts the elements of the array in ascending order
+//10. sort(): Sorts the elements of the array in ascending order
 
 let numbers = [9, 7, 4, 2, 1, 5, 3];
 numbers.sort();
@@ -143,12 +143,12 @@ console.log(numbers);
 numbers.reverse();
 console.log(numbers);
 
-//12. indexOf(): It specifies the index of the value specified.
+//11. indexOf(): It specifies the index of the value specified.
 
 let index = numbers.indexOf(2);
 console.log(index);
 
-//13. find(): It finds the elements and returns it once it is found based on the condition written inside the function. It also evaluates to either true or false, if true then it returns that element and stops if false and no element matches the condition then it returns undefined
+//12. find(): It finds the elements and returns it once it is found based on the condition written inside the function. It also evaluates to either true or false, if true then it returns that element and stops if false and no element matches the condition then it returns undefined
 
 let result = numbers.find((el) => {
     return el % 2 == 0;
