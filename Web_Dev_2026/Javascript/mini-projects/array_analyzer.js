@@ -50,14 +50,14 @@ function getSquares(numbers){
     return squares;
 }
 
-function sortInAsc(numbers){
-    let ascending = numbers.sort();
-    return ascending;
-}
+// function sortInAsc(numbers){
+//     let ascending = numbers.sort();
+//     return ascending;
+// }
 
-function sortInDesc(numbers){
-    return sortInAsc(numbers).reverse();
-}
+// function sortInDesc(numbers){
+//     return sortInAsc(numbers).reverse();
+// }
 
 function findANumber(num){
     let result = numbers.find((el) => {
@@ -94,10 +94,12 @@ console.log("Maximum Number is: ", getMaximum(numbers));
 console.log("Minimum Number is: ", getMinimum(numbers));
 console.log("Even Numbers: ", getEven(numbers));
 console.log("Squares of Numbers: ", getSquares(numbers));
-console.log("Sorting the array in ascending order: ", sortInAsc(numbers));
-console.log("Sorting the array in descending order: ", sortInDesc(numbers));
+// console.log("Sorting the array in ascending order: ", sortInAsc(numbers));
+// console.log("Sorting the array in descending order: ", sortInDesc(numbers));
 findANumber(8);
 countEvenOdd(numbers);
+
+//Sorting in ascending and descending order is pending, Will complete it after learning comparator. 
 
 
 
