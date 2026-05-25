@@ -1,4 +1,4 @@
-//Scopes in JS:
+// I) Scopes in JS:
 
 //1. Global Scope: Variables declared with var, let, const inside the global scope are accessible anywhere in the entire file.
 
@@ -86,3 +86,17 @@ function sayHello(){
 // }
 
 // console.log(height);
+
+
+// II_ Temporal Dead Zone: The region between the accessing of the variable and its initialization with let or const is known as temporal dead zone. As in this region the values of the variable declared with let and const are not accessible since the variables declared with let & const are not hoisted that's why there value cannot be accessed.
+
+
+//The region between line 95 and 98 is known as temporal dead zone
+console.log(marks);
+console.log("Hi");
+console.log("Hello");
+const marks = 100;
+console.log(marks);
+
+
+
