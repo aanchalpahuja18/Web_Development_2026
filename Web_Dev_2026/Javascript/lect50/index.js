@@ -1,4 +1,5 @@
-//Error Handling in JS:
+//Error Handling in JS: 
+//After the error is thrown / caught by the catch block the flow of the program after the catch block is interrupted and stopped.
 
 //Types of Errors:
 
