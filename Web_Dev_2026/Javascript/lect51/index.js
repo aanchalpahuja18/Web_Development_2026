@@ -39,6 +39,20 @@ let newDiv = document.querySelector('#newDiv')
 
 newDiv.appendChild(newEle)
 
+//Difference between append and appendChild:
+
+//1. appendChild() is an older method and it appends only nodes that is element nodes and also it appends one node at a time. It returns the appended node. appendChild() only accepts one node. Cannot append text/string directly to the parent element.
+
+//2. append() is a newer and flexible method and it can append multiple elements, strings and multiple items at once. It does not return the appended node. It returns undefined.
+
+
+let h1 = document.createElement('h1');
+h1.innerText = 'Heading element'
+
+let h2 = document.createElement('h2');
+h2.innerText = 'Sub Heading element'
+newDiv.append(h1, 'Hello World', h2)
+
 //Adding the element on our specific position:
 
 let newEle2 = document.createElement('p');
@@ -56,3 +70,23 @@ newEle2.innerText = 'I am the para created to insert the element at specific pos
 
 newDiv.removeChild(newEle);
 
+
+//Difference between remove and removeChild:
+
+//1. remove() directly removes the element itself, we do not need to access the parent element in order to remove the desired element. 
+
+//Syntax:
+
+// element.remove();
+
+//Result:
+// Element disappears.
+// Easy to use
+// No need to access parent.
+
+// h2.remove()
+
+
+//2. removeChild() here parent removes the child element and we need to first access the parent element to remove the desired child element.
+
+newDiv.removeChild(h1)
