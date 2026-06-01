@@ -54,7 +54,8 @@ fDiv.classList
 
 //To set the className of the element and it replaces the existing value of the element:
 
-fDiv.classList.add('myDiv latestDiv');
+fDiv.classList.add('myDiv');
+fDiv.classList.add('latestDiv');
 
 //remove():
 
