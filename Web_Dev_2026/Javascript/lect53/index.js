@@ -29,6 +29,8 @@ let paras = document.querySelectorAll('p');
 
 
 //here also we have created 4 mappings for the paragraphs having same listener.
+
+//event.target gives us the element on which the event is occurred.
 function alertClick(event){
     alert("You have clicked para: " + event.target.textContent)
 }
