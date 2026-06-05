@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+header{
+    font-size: 1.5rem;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+main{
+    text-align: center;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+p{
+    font-size: 1.3rem;
+    font-weight: 540;
+}
+
+button{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: bisque;
+}
+
+.darkMode{
+    background-color: #333;
+    color: white;
+}
+
+.whiteMode{
+    background-color: #fff;
+    color: #333;
+}
