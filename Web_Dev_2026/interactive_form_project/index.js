@@ -27,6 +27,7 @@ function validateName(inpName){
     if(inpName.value === ""){
         inpName.classList.replace('baseBorder', 'redBorder');
         nameDiv.append(errorMsgName);
+        return false;
     }
     else{
         inpName.classList.replace('redBorder','greenBorder');
@@ -41,6 +42,7 @@ function validateAge(inpAge){
     if(number <= 0){
         inpAge.classList.replace('baseBorder', 'redBorder');
         ageDiv.append(errorMsgAge)
+        return false;
     }
     else{
         inpAge.classList.replace('redBorder','greenBorder');
@@ -55,21 +57,25 @@ function validateEmail(inpEmail){
         inpEmail.classList.replace('baseBorder', 'redBorder');
         errorMsgEmail.innerText = "* Please fill this field";
         emailDiv.append(errorMsgEmail);
+        return false;
     }
     else if(email.includes('@') == false){
         inpEmail.classList.replace('baseBorder', 'redBorder');
         errorMsgEmail.innerText = "* Please input a valid email address";
         emailDiv.append(errorMsgEmail);
+        return false;
     }
     else if(email.includes('.') == false){
         inpEmail.classList.replace('baseBorder', 'redBorder');
         errorMsgEmail.innerText = "* Please input a valid email address";
         emailDiv.append(errorMsgEmail);
+        return false;
     }
     else if(email.includes(' ')){
         inpEmail.classList.replace('baseBorder', 'redBorder');
         errorMsgEmail.innerText = "* Please input a valid email address";
         emailDiv.append(errorMsgEmail);
+        return false;
     }
     else{
         inpEmail.classList.replace('redBorder','greenBorder');
