@@ -29,8 +29,9 @@ function validateName(inpName){
         nameDiv.append(errorMsgName);
     }
     else{
-        inpName.classList.replace('redBorder','baseBorder');
+        inpName.classList.replace('redBorder','greenBorder');
         errorMsgName.remove();
+        return true;
     }
 }
 
@@ -42,8 +43,9 @@ function validateAge(inpAge){
         ageDiv.append(errorMsgAge)
     }
     else{
-        inpAge.classList.replace('redBorder','baseBorder');
+        inpAge.classList.replace('redBorder','greenBorder');
         errorMsgAge.remove();
+        return true;
     }
 }
 
@@ -70,16 +72,20 @@ function validateEmail(inpEmail){
         emailDiv.append(errorMsgEmail);
     }
     else{
-        inpEmail.classList.replace('redBorder','baseBorder');
+        inpEmail.classList.replace('redBorder','greenBorder');
         errorMsgEmail.remove();
+        return true;
     }
 }
 
 function validateInput(event){
     event.preventDefault();
-    validateName(inpName);
-    validateAge(inpAge);
-    validateEmail(inpEmail);
+    let nameValidationCheck = validateName(inpName);
+    let ageValidationCheck = validateAge(inpAge);
+    let emailValidationCheck = validateEmail(inpEmail);
+    if(nameValidationCheck == true && ageValidationCheck == true && emailValidationCheck == true){
+        alert("Your form has been submitted successfully!")
+    }
 }
 
 
