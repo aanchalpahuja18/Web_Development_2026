@@ -14,7 +14,7 @@
 //then catch & finally:
 
 let promise1 = new Promise((resolve, reject) => {
-    let flag = false;
+    let flag = true;
     if(flag){
         resolve("Promise is resolved");
     }
@@ -29,4 +29,47 @@ promise1.then((message) => {
 }).catch((error) => {
     console.log("Error is: " + error);
 })
- 
+
+
+//Promise Chaining: When we have multiple then() chained together that is known as promise chaining:
+
+promise1.then((message) => {
+    console.log("First message " + message);
+    return "Second promise"
+}).then((message) => {
+    console.log("Second message " + message);
+    return "Third promise"
+}).then((message) => {
+    console.log("Third message " + message);
+})
+.catch((error) => {
+    console.log("Error is: " + error);
+    
+})
+.finally(() => {
+    console.log("I am finally, I will be executed everytime");
+})
+
+//Promise.all():
+
+let p1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 1000, "First")
+})
+
+let p2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 2000, "Second");
+})
+
+let p3 = new Promise((resolve, reject) => {
+    setTimeout(reject, 4000, "Third")
+})
+
+Promise.all([p1, p2, p3])
+.then((values) => {
+    console.log("Values: " + values);
+    
+})
+.catch((error) => {
+    console.log("error: " + error);
+    
+})
