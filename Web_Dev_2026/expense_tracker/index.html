@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 id="expense-header">Expense Tracker</h1>
+    </div>
+    <form id="input-box">
+        <div id="exp-name-box">
+            <label for="expense-name">Enter your expense:</label>
+            <input type="text" id="expense-name" placeholder="Expense name">
+        </div>
+        <br> 
+        <div id="exp-amt-box">
+            <label for="expense-amt">Enter amt spend:</label>
+            <input type="number" id="expense-amt" placeholder="Rs.1000">
+        </div>
+        <br> 
+        <div id="exp-cat-box">
+            <label for="category">Category of expense:</label>
+            <select name="category" id="category">
+                <option value="select" selected>Select your category</option>
+                <option value="food">Food</option>
+                <option value="travel">Travel</option>
+                <option value="shopping">Shopping</option>
+                <option value="groceries">Groceries</option>
+                <option value="penny">Random</option>
+            </select>
+        </div>
+        <br>
+        <button id="add-expense">Add Expense</button>
+    </form>
+    <div id="expense-box">
+        <p id="expenses-list">Your Expenses:</p>
+        <input type="text" id="filter" placeholder="eg: Food, Travel, etc">
+        <button id="filter-btn">Filter Expense</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
