@@ -37,7 +37,14 @@
     </form>
     <div id="expense-box">
         <p id="expenses-list">Your Expenses:</p>
-        <input type="text" id="filter" placeholder="eg: Food, Travel, etc">
+        <select name="filterCategory" id="filterCategory">
+                <option value="select" selected>Select your category</option>
+                <option value="food">Food</option>
+                <option value="travel">Travel</option>
+                <option value="shopping">Shopping</option>
+                <option value="groceries">Groceries</option>
+                <option value="penny">Random</option>
+            </select>
         <button id="filter-btn">Filter Expense</button>
     </div>
 

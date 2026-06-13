@@ -131,17 +131,17 @@ addExpBtn.addEventListener('click', renderExpenses)
 //filter expenses:
 
 let filterBtn = document.getElementById('filter-btn');
-let filterInput = document.getElementById('filter');
+let filterInput = document.getElementById('filterCategory');
 
 function filterExpenses(){
     let expCategory = filterInput.value;
-    
-    if(expCategory === ''){
+
+    if(expCategory === 'select'){
         showExpenses(expensesArr);
         return;
     }
     let filteredArr = expensesArr.filter((element) => {
-        return element.category == expCategory.toLowerCase();
+        return element.category == expCategory;
     })
     showExpenses(filteredArr);
 }
