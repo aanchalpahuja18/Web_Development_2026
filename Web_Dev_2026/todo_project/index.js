@@ -14,11 +14,13 @@ class Todo{
     id; 
     text;
     createdAt;
+    completed;
 
     constructor(newText){
         this.id = Date.now();
         this.text = newText;
         this.createdAt = (new Date()).toLocaleString();
+        this.completed = false;
     }
 }
 
@@ -28,7 +30,12 @@ function renderTodo(todoArr){
         let todoDiv = document.createElement('div');
         todoDiv.className = "todo-div"
         let todoText = document.createElement('span');
-        todoText.className = "todo-text"
+        if(el.completed){
+            todoText.className = "todo-done";
+        }
+        else{
+            todoText.className = "todo-text"
+        }
         let todoCompleted = document.createElement('button');
         todoCompleted.className = "todoCompletedBtn";
         todoCompleted.innerText = "Done"
@@ -79,7 +86,9 @@ function removeTodo(event){
 }
 
 function completedTodo(event){
-    let parentElement = event.target.parentElement;
-    let childDiv = parentElement.querySelector('.todo-text');
-    childDiv.classList.add('todo-done')
+    event.target.disabled;
+    let id = event.target.parentElement.dataset.id;
+    let targetTodo = todoArr.find((el) => el.id == id);
+    targetTodo.completed = true
+    renderTodo(todoArr)
 }
