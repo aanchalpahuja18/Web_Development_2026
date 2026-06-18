@@ -2,6 +2,11 @@
 let inputTask = document.getElementById('inputTask');
 let inputBtn = document.getElementById('inputBtn');
 let todoContent = document.getElementById('todo-content');
+let inputBox = document.getElementById('inputBox');
+
+let errorMsg = document.createElement('p');
+errorMsg.innerText = "* Please enter a valid todo!"
+errorMsg.className = "errorMsg"
 
 let todoArr = [];
 
@@ -15,12 +20,6 @@ class Todo{
         this.text = newText;
         this.createdAt = (new Date()).toLocaleString();
     }
-
-    // getTodo(){
-    //     console.log("Todo's id: " + this.id);
-    //     console.log("Todo's created status: " + this.createdAt);
-    //     console.log("Todo's text: " + this.text);
-    // }
 }
 
 function renderTodo(todoArr){
@@ -30,12 +29,15 @@ function renderTodo(todoArr){
         todoDiv.className = "todo-div"
         let todoText = document.createElement('span');
         todoText.className = "todo-text"
+        let todoCompleted = document.createElement('button');
+        todoCompleted.className = "todoCompletedBtn";
+        todoCompleted.innerText = "Done"
         let todoRemove = document.createElement('button');
         todoRemove.className = "todoRemoveBtn";
         let createdText = document.createElement('p');
         let todoTextInfo = document.createElement('div');
         todoText.innerText = el.text;
-        todoRemove.innerText = "Done";
+        todoRemove.innerText = "Remove";
         todoDiv.dataset.id = el.id;
         createdText.innerText = `(Created at: ${el.createdAt})`
         createdText.className = "createdText";
@@ -43,17 +45,20 @@ function renderTodo(todoArr){
         todoTextInfo.append(todoText);
         todoTextInfo.append(createdText)
         todoDiv.append(todoTextInfo);
+        todoDiv.append(todoCompleted);
         todoDiv.append(todoRemove);
         todoContent.append(todoDiv);  
         todoRemove.addEventListener('click', removeTodo);
+        todoCompleted.addEventListener('click', completedTodo);
     })
 }
 
 function addTodo(){
-    if(inputTask.value === ""){
-        alert("Please enter a valid todo!")
+    if(inputTask.value.trim() === ""){
+        inputBox.append(errorMsg)
     }
     else{
+        errorMsg.remove();
         let todo = new Todo(inputTask.value);
         todoArr.push(todo);
         inputTask.value = "";
@@ -64,9 +69,17 @@ function addTodo(){
 inputBtn.addEventListener('click', addTodo);
 
 function removeTodo(event){
+    // setTimeout(function animation(){
+    //     let element = event.target.parentElement;
+    //     element.className = "removedTask"
+    // }, 100);   
     let id = event.target.parentElement.dataset.id;
-    let element = event.target.parentElement;
     todoArr = todoArr.filter((el) => el.id != id);
-    element.className = "removedTask"
     renderTodo(todoArr)
+}
+
+function completedTodo(event){
+    let parentElement = event.target.parentElement;
+    let childDiv = parentElement.querySelector('.todo-text');
+    childDiv.classList.add('todo-done')
 }

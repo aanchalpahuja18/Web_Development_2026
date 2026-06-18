@@ -47,6 +47,11 @@ body{
     font-size: 1.2rem;
 }
 
+.todo-done{
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
 .todoRemoveBtn{
     padding: 0.4rem 0.8rem;
     background-color: palevioletred;
@@ -54,6 +59,18 @@ body{
     color: white;
     margin-left: 1.5rem;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.todoCompletedBtn{
+    padding: 0.4rem 0.8rem;
+    background-color: palevioletred;
+    border: none;
+    color: white;
+    margin-left: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    left: 2.8rem;
     cursor: pointer;
 }
 
@@ -83,8 +100,8 @@ body{
     color: gray;
 }
 
-.removedTask{
-   animation: floatTowardsRight 2s ease forwards;
+/* .removedTask{
+   animation: floatTowardsRight 10s ease forwards;
 }
 
 @keyframes floatTowardsRight {
@@ -94,4 +111,16 @@ body{
     100%{
         transform: translateX(100%);
     }
+} */
+
+.errorMsg{
+    margin-top: 1.1rem;
+    max-width: 490px;
+    text-align: start;
+    position: relative;
+    left: 17%;
+    color: red;
+    padding: 0.2rem;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
