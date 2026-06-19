@@ -38,7 +38,7 @@ async function fetchUser(value){
     try{
         let response = await fetch(githubProfile);  
         let data = await response.json();
-        if(data.status === 404){
+        if(data.status === '404'){
             githubDiv.className = ""
             fetchMsg.remove();
             content.append(userNotFound);
