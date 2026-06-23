@@ -26,13 +26,6 @@ class Expense {
         this.category = expenseCategory
         this.id = Date.now();
     }
-
-    getExpenses() {
-        console.log("Name of expense is: " + this.name);
-        console.log("Amount of expense is: " + this.amount);
-        console.log("Category of expense is: " + this.category);
-    }
-
 }
 
 //add Expenses:
@@ -52,9 +45,24 @@ totalInfo.className = "total-info";
 
 expenseBox.insertAdjacentElement('afterend',totalInfo);
 
+if(localStorage.getItem("expenses")){
+    expensesArr = JSON.parse(localStorage.getItem("expenses"));
+    expensesArr.forEach((expense) => {
+        totalExpenses += Number(expense.amount);
+    });
+
+    totalInfo.innerText = `Total amt spend is: ${totalExpenses}`;
+    showExpenses(expensesArr)
+}
+
+function saveExpenses(){
+    localStorage.setItem("expenses", JSON.stringify(expensesArr));
+}
+
 function addExpenses(name, amt, category){
     let expense = new Expense(name, amt, category);
     expensesArr.push(expense);
+    saveExpenses();
     showExpenses(expensesArr);
     totalExpenses += Number(expense.amount);
     totalInfo.innerText = `Total amt spend is: ${totalExpenses}` 
@@ -80,17 +88,18 @@ function showExpenses(arr){
 
 function removeExpense(event){
     let id = Number(event.target.parentElement.dataset.id);
-    let removed = expensesArr.find((element)=>element.id == id);
+    let removed = expensesArr.find((element)=>element.id === id);
     expensesArr = expensesArr.filter((el) => el.id != id);
     totalExpenses -= Number(removed.amount);
     totalInfo.innerText = `Total amt spend is: ${totalExpenses}` 
+    saveExpenses();
     showExpenses(expensesArr);
 }
 
 
 
 function validateInputs(name, amt, category){
-    if(name == ""){
+    if(name.trim() === ""){
         errorMsgName.innerText = "Please enter correct value for name!";
         expNameDiv.append(errorMsgName)
         return false;
@@ -100,7 +109,7 @@ function validateInputs(name, amt, category){
         expAmtDiv.append(errorMsgAmt)
         return false;
     }
-    else if(category == 'select'){
+    else if(category === 'select'){
         errorMsgCat.innerText = "Please enter correct value for category!"
         expCatDiv.append(errorMsgCat)
         return false;
@@ -118,7 +127,7 @@ function renderExpenses(event){
     let name = expName.value;
     let amt = expAmt.value;
     let category = expCategory.value
-    if(validateInputs(name, amt, category) == true){
+    if(validateInputs(name, amt, category) === true){
         addExpenses(name, amt, category);
     }
     else{
@@ -141,7 +150,7 @@ function filterExpenses(){
         return;
     }
     let filteredArr = expensesArr.filter((element) => {
-        return element.category == expCategory;
+        return element.category === expCategory;
     })
     showExpenses(filteredArr);
 }
