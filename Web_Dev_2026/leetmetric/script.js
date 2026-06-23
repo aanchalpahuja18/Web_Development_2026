@@ -47,13 +47,11 @@ document.addEventListener("DOMContentLoaded", function(){
             };
 
             const response = await fetch(proxyUrl+targetUrl, requestOptions);
-            console.log(response);
             if(response.ok == false){
                 throw new Error("Unable to fetch the user details")
             }
             else{
                 const parsedData = await response.json();
-                console.log("Logging data: ", parsedData);
                 displayUserData(parsedData)
             }
         }
@@ -107,8 +105,6 @@ document.addEventListener("DOMContentLoaded", function(){
                 value: parsedData.data.matchedUser.submitStats.totalSubmissionNum[3].submissions
             }
         ]
-
-        console.log(cardData);
         statsCard.innerHTML = cardData.map((el) => {
             return `
             <div class = "card">
@@ -121,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     searchBtn.addEventListener("click", function(){
         const userName = inputBar.value;
-        console.log("Logging username: " + userName);
         if(validateUsername(userName)){
             fetchUserDetails(userName);
         }
