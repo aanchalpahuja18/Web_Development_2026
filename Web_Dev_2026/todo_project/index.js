@@ -10,6 +10,11 @@ errorMsg.className = "errorMsg"
 
 let todoArr = [];
 
+if(localStorage.getItem("todos")){
+    todoArr = JSON.parse(localStorage.getItem("todos"));
+    renderTodo(todoArr)
+}
+
 class Todo{
     id; 
     text;
@@ -68,6 +73,7 @@ function addTodo(){
         errorMsg.remove();
         let todo = new Todo(inputTask.value);
         todoArr.push(todo);
+        localStorage.setItem("todos", JSON.stringify(todoArr));
         inputTask.value = "";
         renderTodo(todoArr);
     }
@@ -82,13 +88,15 @@ function removeTodo(event){
     // }, 100);   
     let id = event.target.parentElement.dataset.id;
     todoArr = todoArr.filter((el) => el.id != id);
+    localStorage.setItem("todos", JSON.stringify(todoArr));
     renderTodo(todoArr)
 }
 
 function completedTodo(event){
-    event.target.disabled;
+    event.target.disabled = true;
     let id = event.target.parentElement.dataset.id;
     let targetTodo = todoArr.find((el) => el.id == id);
-    targetTodo.completed = true
+    targetTodo.completed = true;
+    localStorage.setItem("todos", JSON.stringify(todoArr))
     renderTodo(todoArr)
 }
