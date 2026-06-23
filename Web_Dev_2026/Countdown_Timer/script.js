@@ -1,8 +1,6 @@
 const startDate = new Date().getTime();
-console.log(startDate);
 
 const endDate = new Date("25 June, 2026 20:00:00").getTime();
-console.log(endDate);
 
 
 function updateTimer(){
@@ -10,7 +8,6 @@ function updateTimer(){
     const totalTime = endDate - startDate;
     const elapsedTime = currentDate - startDate;
     const timeToComplete = endDate - currentDate;
-    console.log(timeToComplete);
     
 
     //calculate days, hrs, mins, sec:
@@ -21,18 +18,12 @@ function updateTimer(){
     const oneSecInMillis = 1000;
 
     const days = Math.floor((timeToComplete)/(oneDayInMillis));
-    console.log(days);
     
     const hrs = Math.floor((timeToComplete%(oneDayInMillis))/(oneHrInMillis));
-    console.log(hrs);
     
     const mins = Math.floor((timeToComplete%(oneHrInMillis))/(oneMinInMillis));
-    console.log(mins);
     
     const secs = Math.floor((timeToComplete%(oneMinInMillis))/oneSecInMillis);
-    console.log(secs);
-    
-
 
     //populating data in ui
 
