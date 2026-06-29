@@ -18,6 +18,11 @@ let newArr = arr.map(function(el){
 //    store returned value
 // }
 
+//Internally JS does the looping like below for higher order functions.
+//for(let i=0;i<nums.length;i++){
+//    callback(nums[i]);
+// }
+
 // eg: filter logic:
 // for(each element){
 //    if callback returns true
