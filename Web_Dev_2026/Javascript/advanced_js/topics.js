@@ -57,3 +57,33 @@ console.log(todos);
 console.log(newTodos);
 
 
+//Event bubbling: Event moves upward.
+
+// button → div → body → html → document -> This is bubbling
+
+//To stop bubbling, we have:
+// event.stopPropagation();
+
+//Debouncing: Used mainly in search boxes, It says wait until the user stops typing
+
+// Example:
+
+// Wait 500ms.
+
+// Then API call.
+
+//Without debounce : 10 API Calls,
+//With debounce: 1 API call
+
+//Throttling: Allow action only once every fixed interval.
+
+// Difference
+
+// Debounce: Search bar
+
+// Wait until user stops
+
+// Throttle: Scrolling event
+
+// Run repeatedly but limited
+
