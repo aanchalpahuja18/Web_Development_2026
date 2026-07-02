@@ -6,7 +6,7 @@ const UserCard = (props) => {
     return (
         <div id="user-container" style={props.style}>
             <h2 id="user-name">{props.name}</h2>
-            <img src={aanchal} alt="Aanchal" id="user-img"/>
+            <img src={props.image} alt="Aanchal" id="user-img"/>
             <p id="user-desc">{props.desc}</p>
         </div>
     )
