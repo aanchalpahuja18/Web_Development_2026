@@ -1,0 +1,41 @@
+.product-img{
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.btn{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: #333;
+}
+
+.card{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+    height: 450px;
+    padding: 1.2rem;
+    min-width: 350px;
+    max-width: 500px;
+}
+
+.product-category{
+    background-color: pink;
+    color: #333;
+    padding: 0.1rem;
+}
+
+.product-name{
+    font-size: 1.4rem;
+}
+
+.product-category{
+    font-size: 1.2rem;
+}
