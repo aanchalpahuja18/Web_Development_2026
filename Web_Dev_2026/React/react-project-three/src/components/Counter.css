@@ -1,0 +1,28 @@
+.counter-container{
+    background-color: #333;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn{
+    padding: 1rem;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-container{
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    align-items: center;
+}
