@@ -1,0 +1,17 @@
+.search-box{
+    margin-top: 2rem;
+    padding: 1.2rem 2rem;
+}
+
+.searchForm{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+#searchInp{
+   width: 350px;
+   padding: 0.2rem;
+   border: none;
+}

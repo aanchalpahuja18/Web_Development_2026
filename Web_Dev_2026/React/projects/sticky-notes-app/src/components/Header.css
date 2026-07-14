@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem
+}
+
+
+.header-title{
+    font-size: 3rem;
+}
+
+.header-subtitle{
+    font-size: 1.6rem;
+}

@@ -1,0 +1,31 @@
+.inputNote{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    padding: 1.2rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    max-width: 70%;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.inputFields{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.buttons{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.buttons button{
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: lightpink;
+}
