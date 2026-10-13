@@ -2,7 +2,7 @@
 
 A code repo for learning Web Development basics using projects, fundamentals, etc.
 It contains projects & learnings based on technologies like: 
-HTML
-CSS
-JS
+HTML, 
+CSS, 
+JS,
 Tailwind
