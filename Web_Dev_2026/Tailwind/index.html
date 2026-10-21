@@ -6,6 +6,13 @@
     <title>Razorpay</title>
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="dist/styles.css">
+    <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
     <style>
         .companiesList{
             animation: 10s infinite linear moveCompany
@@ -804,6 +811,55 @@
             </div>
         </section>
 
+
+        <!-- CTA section -->
+        <section class="bg-[url(/Images/CTABg.svg)] bg-light-blue-500 w-full bg-no-repeat bg-cover relative min-h-127.5">
+            <!-- main content box  -->
+            <div class="w-11/12 max-w-270 relative mx-auto flex items-center justify-between space-x-20 pt-16">
+                <!-- left part  -->
+                <div class="flex flex-col gap-5 mt-12 max-w-150">
+                    <h2 class="text-white font-mullish font-bold text-2xl">Supercharge your business with Razorpay</h2>
+                    <div class="w-6 h-1 bg-green-light"></div>
+                    <p class="font-mullish text-white">Sign up now to experience the future of payments and offer your customers the best checkout experience.</p>
+                    <ul class="flex flex-wrap gap-x-11 gap-y-4 text-white">
+                        <li class="flex text-white font-mullish">
+                            <i data-feather="check" class="text-green-light"></i>
+                            <span>Quick Onboarding</span>
+                        </li>
+                        <li class="flex text-white font-mullish">
+                            <i data-feather="check" class="text-green-light"></i>
+                            <span>Access to entire product suite</span>
+                        </li>
+                        <li class="flex text-white font-mullish">
+                            <i data-feather="check" class="text-green-light"></i>
+                            <span>API access</span>
+                        </li>
+                        <li class="flex text-white font-mullish">
+                            <i data-feather="check" class="text-green-light"></i>
+                            <span>24x7 support</span>
+                        </li>
+                    </ul>
+
+                    <button class="text-light-blue-300 font-bold font-mullish min-w-8 text-sm bg-white border flex rounded-sm items-center hover:text-light-blue-500 transition-all duration-200 py-3 px-4 cursor-pointer place-self-start">
+                        Sign Up
+                        <svg
+                            viewBox="0 0 24 24"
+                            focusable="false"
+                            class="w-3.5 h-3.5 ml-3"
+                            >
+                            <path
+                                fill="currentColor"
+                                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                            ></path>
+                        </svg>
+                    </button>
+                    
+                </div>
+
+                <!-- right part  -->
+                <img src="./Images/ctaImg.svg" alt="" loading="lazy" width="240px" height="282px">
+            </div>
+        </section>
     </div>
    
     <script>
