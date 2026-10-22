@@ -41,12 +41,12 @@
         </section>
         <!-- Nav bar -->
         <nav class="bg-deep-blue">
-        <div class="flex items-center justify-betweem relative w-270 mx-auto">
+        <div class="flex items-center justify-between relative w-270 mx-auto">
             <!-- logo create -->
              <a href="/" class="cursor-pointer py-7 pr-7">
                 <img src="./Images/logo.svg" width="125px" height="30px" alt="razorpay logo">
              </a>
-             <ul class="flex gap-6">
+             <ul class="lg:flex gap-6 hidden">
                     <li class="text-white font-mullish py-7 hover:text-light-blue cursor-pointer transition-all duration-200 relative group">
                         <a href="#">Payments</a>
                         <div class="absolute bottom-0 w-full h-1 bg-light-blue hidden group-hover:block transition-all duration-200"></div>
@@ -76,9 +76,9 @@
                 </ul>
 
                 <div class="flex space-x-6 ml-4">
-                    <img src="./Images/india-flag.svg" width="28px" height="20px" alt="india flag">
-                    <button class="py-3 px-5 font-mullish text-white cursor-pointer border-light-blue border rounded-sm text-sm font-bold">Log in</button>
-                    <button class="py-3 px-4 font-mullish bg-white text-light-blue-300 hover:text-light-blue-500 border rounded-sm font-bold text-sm transition-all duration-200 cursor-pointer">Sign up 
+                    <img src="./Images/india-flag.svg" width="28px" height="20px" alt="india flag" class="lg:block hidden">
+                    <button class="py-3 px-5 font-mullish text-white cursor-pointer border-light-blue border rounded-sm text-sm font-bold overflow-x-auto">Log in</button>
+                    <button class="py-3 px-4 font-mullish bg-white text-light-blue-300 hover:text-light-blue-500 border rounded-sm font-bold text-sm transition-all duration-200 cursor-pointer hidden lg:block">Sign up 
                     </button>
                 </div>
         </div>
@@ -86,7 +86,7 @@
 
         <!-- Hero Section  -->
         <section class="relative bg-deep-blue">
-            <div class="w-10/12 max-w-270 flex flex-row justify-between items-center mx-auto">
+            <div class="w-10/12 max-w-270 flex flex-col pt-10 lg:flex-row justify-between items-center mx-auto">
                 <!-- left text part -->
                 <div class="flex flex-col gap-8 items-start">
                     <h1 class="text-white text-[40px] leading-[1.2] font-mullish font-bold ">Power your finance, grow your business</h1>
@@ -111,7 +111,8 @@
 
             <div class="relative w-11/12 max-w-270 mx-auto pt-4">
                 <!-- heading  -->
-                <h2 class="font-mullish font-extrabold text-center text-2xl leading-1.2">Accept payments with Razorpay Payment Suite</h2>
+                <h2 class="font-mullish font-extrabold text-center text-2xl leading-1.2 hidden md:block">Accept payments with Razorpay Payment Suite</h2>
+                <h2 class="font-mullish font-extrabold text-center text-5xl leading-1.2 md:hidden">Explore Razorpay Payment Suite</h2>
                 <div class="w-6 h-1 bg-green-light mx-auto mt-4 mb-6"></div>
 
                 <!-- content box  -->
@@ -148,17 +149,17 @@
                             </li>
                         </ul>
                         <!-- for button and hyperlink -->
-                        <div class="flex flex-row gap-4 items-center">   
-                            <button class="bg-light-blue w-fit text-white py-3.5 px-4.5 rounded-md font-mullish font-bold hover:bg-light-blue-500 transition-all duration-200 cursor-pointer">Sign Up Now</button>
+                        <div class="flex flex-col-reverse md:flex-row gap-4 items-center">   
+                            <button class="bg-light-blue w-full md:w-fit text-white py-3.5 px-4.5 rounded-md font-mullish font-bold hover:bg-light-blue-500 transition-all duration-200 cursor-pointer">Sign Up Now</button>
                             <!-- hyperlink -->
-                            <div class="flex flex-row items-center cursor-pointer group">
+                            <div class="flex flex-row self-start md:self-center cursor-pointer group">
                                 <a href="#" class="font-mullish font-bold text-light-blue-500 group-hover:text-gray-blue transition-all duration-200">Know more</a>
                                 <i data-feather="chevron-right" class="w-5 h-5 text-light-blue-500 group-hover:text-gray-blue transition-all duration-200"></i>
                             </div>
                         </div>
                     </div>
                     <!-- right section image -->
-                    <img src="./Images/payment-suite.png" alt="" class="max-w-150 absolute right-0 bottom-0">
+                    <img src="./Images/payment-suite.png" alt="" class="hidden md:max-w-100 md:block lg:max-w-150 lg:block absolute right-0 bottom-0">
                 </div>
 
         <!-- cards section  -->
@@ -866,6 +867,102 @@
 
                 <!-- right part  -->
                 <img src="./Images/ctaImg.svg" alt="" loading="lazy" width="240px" height="282px">
+            </div>
+        </section>
+
+        <!-- footer section  -->
+        <section>
+            <div>
+                <!-- column 1  -->
+                <div>
+                    <div>
+                        <img src="./Images/razorpayX.svg" alt="">
+                        <span>Razorpay</span>
+                    </div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <h2>Subscribe to our Newsletter</h2>
+                    <div>
+                        <form>
+                            <input type="text" placeholder="Your email address">
+                            <span>Subscribe</span>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- column 2  -->
+                <div>
+                    <ul>
+                        <span>BANKING PLUS</span>
+                        <li>
+                            <a href="#">Current Accounts</a>
+                        </li>
+                        <li>
+                            <a href="#">Payouts</a>
+                        </li>
+                        <li>
+                            <a href="#">Payout Links</a>
+                        </li>
+                        <li>
+                            <a href="#">Corporate Credit Card</a>
+                        </li>
+                        <li>
+                            <a href="#">View Live Demo</a> 
+                            <span>NEW</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>LENDING</span>
+                        <li>
+                            <a href="#">Razorpay Capital</a>
+                        </li>
+                        <li>
+                            <a href="#">Instant Settlements</a>
+                        </li>
+                        <li>
+                            <a href="#">Working Capital Loans</a>
+                        </li>
+                        <li>
+                            <a href="#">Marketplace Instant Settlements</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>RISK AND FRAUD</span>
+                        <li>
+                            <a href="#">Thirdwatch</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                PrePay CoD
+                                <span>NEW</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>BECOME A PARTNER</span>
+                        <li>
+                            <a href="#">Refer and Earn</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Onboarding APIs
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>MORE</span>
+                        <li>
+                            <a href="#">Route</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Invoices
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </div>
